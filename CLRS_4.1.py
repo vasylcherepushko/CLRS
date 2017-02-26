@@ -38,7 +38,7 @@ def kadane(arr):
 times_recursive = []
 times_kadane = []
 times_bruteforce = []
-for i in range(1, 101):
+for i in range(10, 100):
     arr = np.random.randint(-100, 100, size=i)
     print(i)
     
@@ -57,12 +57,12 @@ for i in range(1, 101):
                          number=10)
     times_kadane.append(time)
 
-plt.plot(range(1, 101), times_bruteforce,
-         range(1, 101), times_recursive,
-         range(1, 101), times_kadane)
+plt.plot(range(10, 100), times_bruteforce,
+         range(10, 100), times_recursive,
+         range(10, 100), times_kadane)
 plt.show()
 
-plt.plot(range(1, 21), times_bruteforce[:20],
-         range(1, 21), times_recursive[:20],
-         range(1, 21), times_kadane[:20])
+plt.plot(range(10, 30), times_bruteforce[:20],
+         range(10, 30), times_recursive[:20],
+         range(10, 30), times_kadane[:20])
 plt.show()
