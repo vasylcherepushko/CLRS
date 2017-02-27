@@ -34,24 +34,23 @@ def kadane(arr):
             res = total - lowest
     return (res, arr[start+1:end+1])
 
-
 times_recursive = []
 times_kadane = []
 times_bruteforce = []
 for i in range(10, 100):
     arr = np.random.randint(-100, 100, size=i)
     print(i)
-    
+
     time = timeit.timeit('bruteforce(arr)',
                          globals=globals(),
-                         number=10)    
+                         number=10)
     times_bruteforce.append(time)
-    
+
     time = timeit.timeit('recursive(arr)',
                          globals=globals(),
-                         number=10)                         
+                         number=10)
     times_recursive.append(time)
-    
+
     time = timeit.timeit('kadane(arr)',
                          globals=globals(),
                          number=10)
